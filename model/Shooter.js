@@ -21,6 +21,17 @@ class Shooter extends Sprite {
         }
     }
 
+    //missle is the object that will potentially be in contact with the invader
+    isDestroyed(missle) {
+        //will return true if the invader is supposed to be destroyed by the missle
+        if (this.intersects(missle)) {
+            let audio = new Audio("./assets/explosion.wav");
+            audio.play();
+            return true;
+        }
+        return false;
+    }
+
     
 }
 
