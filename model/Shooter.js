@@ -32,7 +32,13 @@ class Shooter extends Sprite {
         return false;
     }
 
-    
+    reachedBottom(canvasHeight) {
+        //check to see if a missle has reached the bottom of the screen
+        if (this.y < 0 || this.y + this.height > canvasHeight) {
+            return true;
+        }
+        return false;
+    }
 }
 
 export default Shooter;
