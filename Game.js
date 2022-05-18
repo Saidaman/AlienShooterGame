@@ -14,7 +14,13 @@ class Game {
         this.audio.pause();
         this.invadersInPlay = [];
     }
-    
+
+    printInfo(ctx) { //prints the info that is shown at the top left of the screen
+        ctx.font = "16px Arial";
+        ctx.fillStyle = "#0095DD";
+        ctx.fillText("Invaders shot down: " + this.score, 8, 20);
+        ctx.fillText("Missiles remaining: " + this.ship.numMissles, 8, 40);
+    }
 }
 
 export default Game;
