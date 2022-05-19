@@ -21,6 +21,17 @@ class Game {
         ctx.fillText("Invaders shot down: " + this.score, 8, 20);
         ctx.fillText("Missiles remaining: " + this.ship.numMissles, 8, 40);
     }
+
+    collision(invader, missle, i, j) { //makes the sounds of an explosion and makes both the invader and missle disappear
+        this.invadersInPlay.splice(i, 1);
+        this.ship.missles.splice(j, 1);
+        this.ship.numMissles += 1;
+        invader.visible = false;
+        missle.visible = false;
+        this.score += 1;
+        let explosion = new Audio("./assets/explosion.wav");
+        explosion.play();
+    }
 }
 
 export default Game;
