@@ -48,7 +48,7 @@ class Game {
         if (!this.gameStart && this.ship.dx != 0) {
             this.gameStart = true;
             this.ship.gameStart = true;
-            
+            this.audio.play();
         }
 
         
