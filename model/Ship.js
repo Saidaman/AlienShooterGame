@@ -39,7 +39,14 @@ class Ship extends Sprite {
         }
     }
 
-    
+    move(canvasWidth) {
+        super.move();
+        if (this.x < 0) {
+            this.x = 0;
+        } else if (this.x + this.width > canvasWidth) {
+            this.x = canvasWidth - this.width;
+        }
+    }
 }
 
 export default Ship;
