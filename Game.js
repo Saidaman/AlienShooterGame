@@ -40,6 +40,10 @@ class Game {
         //print the score information
         this.printInfo(ctx);
 
+        //draw the ship and allow it to move
+        this.ship.draw(ctx, "/assets/tank.png");
+        this.ship.move(this.canvas.width);
+
         
     }
 }
