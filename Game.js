@@ -32,6 +32,13 @@ class Game {
         let explosion = new Audio("./assets/explosion.wav");
         explosion.play();
     }
+
+    play(ctx) {
+        //clear the gray rectangle
+        ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+        
+    }
 }
 
 export default Game;
