@@ -46,7 +46,8 @@ class Game {
 
         //check if key movement occured
         if (!this.gameStart && this.ship.dx != 0) {
-            
+            this.gameStart = true;
+             
         }
 
         
