@@ -44,6 +44,8 @@ class Game {
         this.ship.draw(ctx, "/assets/tank.png");
         this.ship.move(this.canvas.width);
 
+        //check if key movement occured
+        
         
     }
 }
