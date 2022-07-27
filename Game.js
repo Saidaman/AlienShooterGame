@@ -37,6 +37,9 @@ class Game {
         //clear the gray rectangle
         ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
+        //print the score information
+        this.printInfo(ctx);
+
         
     }
 }
