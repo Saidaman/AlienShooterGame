@@ -45,7 +45,10 @@ class Game {
         this.ship.move(this.canvas.width);
 
         //check if key movement occured
-        
+        if (!this.gameStart && this.ship.dx != 0) {
+            
+        }
+
         
     }
 }
